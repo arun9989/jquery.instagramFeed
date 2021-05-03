@@ -8,7 +8,7 @@
  */
 (function ($) {
     var defaults = {
-        'host': "https://www.instagram.com/",
+        'host': "",
         'username': '',
         'tag': '',
         'user_id': '',
@@ -316,7 +316,7 @@
                     }
 
                     html += '<a href="' + url + '"' + (options.display_captions ? ' data-caption="' + caption + '"' : '') + ' class="instagram-' + type_resource + '" rel="noopener" target="_blank"' + styles.gallery_image_link + '>';
-                    html += '<img' + (options.lazy_load ? ' loading="lazy"' : '') + ' src="' + image + '" alt="' + caption + '"' + styles.gallery_image + ' />';
+                    html += '<div class="wrap"><iframe class="frame" src="' + image  + '" alt="' + caption + '"></iframe></div>';
                     html += '</a>';
                 }
                 html += '</div>';
